@@ -60,7 +60,10 @@ fun TodayScreen(
     ) { paddingValues ->
         if (uiState.todayTasks.isEmpty() && uiState.upcomingTasks.isEmpty() && uiState.overdueTasks.isEmpty()) {
             EmptyState(
-                message = "No tasks scheduled.\nTap + to add a task with a due date!"
+                message = "No tasks scheduled.\nTap + to add a task with a due date!",
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
             )
         } else {
             LazyColumn(
